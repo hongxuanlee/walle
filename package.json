@@ -1,0 +1,31 @@
+{
+  "name": "walle",
+  "version": "0.0.1",
+  "description": "Single page framework based on doubi template engine & express & tarsier.",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "doubi":"*",
+    "express":"*"
+    },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LoveKino/walle.git"
+  },
+  "keywords": [
+    "SPA",
+    "single page"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ddchen",
+    "email": "842914439@qq.com"
+  }
+}
