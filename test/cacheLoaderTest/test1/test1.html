@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test1 for cacheLoader</title>
+	<script src="../lib/cacheLoader.js"></script>
+</head>
+<body>
+	<p>how to run tests</p>
+	<ol>
+		<li>go to "test/cacheLoaderTest" dir.</li>
+		<li>run "node build.js" (maybe you do not need to do 1 & 2 steps, because it's already done by me.)</li>
+		<li>open html in browser.</li>
+		<li>see console log.</li>
+	</ol>
+	<script>
+	    var cacheLoader = CacheLoader.create();
+		cacheLoader.load({
+			url: "./test1.json",
+			success: function(data){
+				console.log(data);
+			}
+		});
+	</script>
+</body>
+</html>

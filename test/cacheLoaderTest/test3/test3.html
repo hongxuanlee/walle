@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test page cache ability</title>
+	<script src="../lib/cacheLoader.js"></script>
+</head>
+<body>
+	<p>how to run tests</p>
+	<ol>
+		<li>go to "test/cacheLoaderTest" dir.</li>
+		<li>run "node build.js" (maybe you do not need to do 1 & 2 steps, because it's already done by me.)</li>
+		<li>open html in browser.</li>
+		<li>see console log.</li>
+	</ol>
+	<script>
+	    var loader = CacheLoader.create({
+	    	cacheTime: 4000,
+	    	maxCacheNum: 2
+	    });
+		loader.load({
+			url: "./test1.json",
+			cachable: true,
+			success: function(data){
+				console.log(data);
+			}
+		});
+
+		loader.load({
+			url: "./test2.json",
+			cachable: true,
+			success: function(data){
+				console.log(data);
+			}
+		});
+
+		loader.load({
+			url: "./test3.json",
+			cachable: true,
+			success: function(data){
+				console.log(data);
+			}
+		});
+
+
+		setTimeout(function(){
+			loader.load({
+				url: "./test2.json",
+				cachable: true,
+				success: function(data){
+					console.log(data);
+				}
+			});
+			
+			loader.load({
+				url: "./test1.json",
+				cachable: true,
+				success: function(data){
+					console.log(data);
+				}
+			});
+		}, 1000);
+
+	</script>
+</body>
+</html>

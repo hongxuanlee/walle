@@ -1,7 +1,7 @@
 {
   "name": "walle",
   "version": "0.0.1",
-  "description": "Single page framework based on doubi template engine & express & tarsier.",
+  "description": "Front part of SPA framework.",
   "directories": {
     "test": "test"
   },
