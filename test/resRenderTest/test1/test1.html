@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test1</title>
+	<script src="../lib/resRender.js"></script>
+</head>
+<body>
+	<div id="wrapper"></div>
+	<script>
+		resRender.render({
+			resJson: {
+				html: "<h1>This is a page!</h1>",
+				style: "h1{color:red}",
+				css:[],
+				js:[],
+				script: "console.log('a');"
+			},
+			container: document.getElementById("wrapper")
+		});
+	</script>
+</body>
+</html>
