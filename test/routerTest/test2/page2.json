@@ -1,0 +1,7 @@
+{
+	"html": "<h1>This is a page2!</h1>",
+	"style": "h1{color:yellow}",
+	"css": [],
+	"js": [],
+	"script": "console.log('page2');"
+}
